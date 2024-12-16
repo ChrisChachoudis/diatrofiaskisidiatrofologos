@@ -1,0 +1,515 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #008080; /* Αλλαγή του background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px; /* Προσθήκη padding για να διασφαλίσουμε ότι το περιεχόμενο είναι εντός της οθόνης */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box; /* Διασφάλιση ότι το padding συμπεριλαμβάνεται στο πλάτος */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Διασφάλιση ότι το padding συμπεριλαμβάνεται στο πλάτος */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #4cae4c;
+}
+
+.admin-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: blue;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.admin-link:hover {
+    text-decoration: underline;
+}
+
+.login-message {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 24px;
+    }
+
+    .login-container input, .login-container button {
+        font-size: 14px;
+    }
+}
+
+.layer-button {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px; /* Αύξηση του margin για μεγαλύτερη απόσταση μεταξύ των κουμπιών */
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px #999;
+    width: 100%; /* Διασφάλιση ότι όλα τα κουμπιά έχουν το ίδιο πλάτος */
+}
+
+.layer-button:hover {
+    background-color: #4cae4c;
+}
+
+.layer-button:active {
+    background-color: #4cae4c;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.dashboard-container {
+    text-align: center;
+    margin-top: 20px; /* Μείωση του margin-top για να τοποθετηθεί πιο πάνω */
+}
+
+.user-item {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.user-item button {
+    border: 1px solid black; /* Μαύρο περίγραμμα για τα κουμπιά */
+    background-color: #5cb85c;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.user-item button:hover {
+    background-color: #4cae4c;
+}
+
+.user-item button:active {
+    background-color: #4cae4c;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.main-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.date-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.exercise-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.exercise-entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px; /* Κυκλικό περίγραμμα */
+    background: linear-gradient(135deg, #f6d365 25%, transparent 25%) -50px 0,
+                linear-gradient(225deg, #f6d365 25%, transparent 25%) -50px 0,
+                linear-gradient(315deg, #fda085 25%, transparent 25%),
+                linear-gradient(45deg, #fda085 25%, transparent 25%);
+    background-size: 100px 100px;
+    animation: wavy 5s linear infinite;
+}
+
+@keyframes wavy {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
+    }
+}
+
+.exercise-entry label,
+.exercise-entry select,
+.exercise-entry input {
+    display: block;
+    width: 100%; /* Διασφάλιση ότι τα πλαίσια έχουν το ίδιο πλάτος */
+    margin-bottom: 10px;
+}
+
+.meal-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.meal-entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px; /* Κυκλικό περίγραμμα */
+    background: linear-gradient(135deg, #f6d365 25%, transparent 25%) -50px 0,
+                linear-gradient(225deg, #f6d365 25%, transparent 25%) -50px 0,
+                linear-gradient(315deg, #fda085 25%, transparent 25%),
+                linear-gradient(45deg, #fda085 25%, transparent 25%);
+    background-size: 100px 100px;
+    animation: wavy 5s linear infinite;
+}
+
+@keyframes wavy {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
+    }
+}
+
+.meal-entry label,
+.meal-entry input {
+    display: block;
+    width: 100%; /* Διασφάλιση ότι τα πλαίσια έχουν το ίδιο πλάτος */
+    margin-bottom: 10px;
+}
+
+.meal-entry input[type="number"] {
+    width: calc(100% - 22px); /* Μείωση του πλάτους για να χωρέσει το κουμπί */
+    display: inline-block;
+}
+
+.meal-entry button {
+    display: inline-block;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 10px 2px;
+}
+
+.food-suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: calc(100% - 22px); /* Adjust width to match input field */
+    background-color: white;
+    z-index: 1000;
+    border-radius: 5px; /* Στρογγυλεμένες γωνίες για το περίγραμμα */
+}
+
+.suggestion {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc; /* Περίγραμμα μεταξύ των στοιχείων */
+}
+
+.suggestion:last-child {
+    border-bottom: none; /* Αφαίρεση του περιγράμματος από το τελευταίο στοιχείο */
+}
+
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+.food-details p {
+    border-bottom: 1px solid #ccc; /* Περίγραμμα μεταξύ των στοιχείων του φαγητού */
+    padding: 5px 0;
+}
+
+.food-details p:last-child {
+    border-bottom: none; /* Αφαίρεση του περιγράμματος από το τελευταίο στοιχείο */
+}
+
+.food-entry {
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Στρογγυλεμένες γωνίες για το περίγραμμα */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* CSS για τα κουμπιά υποβολής μακροθρεπτικών στοιχείων */
+.small-button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 10px 2px;
+}
+
+/* CSS για το κουμπί υποβολής γεύματος */
+.meal-submit-button {
+    width: 100%; /* Μεγαλύτερο πλάτος από τα κουμπιά υποβολής μακροθρεπτικών στοιχείων */
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px 0; /* Μεγαλύτερο margin για να ξεχωρίζει */
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px #999;
+}
+
+.meal-submit-button:hover {
+    background-color: #4cae4c;
+}
+
+.meal-submit-button:active {
+    background-color: #4cae4c;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.rating-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.rating-circle.red {
+    background-color: red;
+}
+
+.rating-circle.yellow {
+    background-color: yellow;
+    color: black; /* Μαύρο κείμενο για καλύτερη αντίθεση */
+}
+
+.rating-circle.green {
+    background-color: green;
+}
+
+/* CSS για το μήνυμα του βαθμού */
+.rating-message {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.meal-total p {
+    background-color: #add8e6; /* Ανοιχτό μπλε χρώμα για το φόντο */
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* CSS για το κουμπί "Επόμενο Βήμα" */
+.animated-button {
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+    background-size: 300%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px #999;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animated-button:hover {
+    box-shadow: 0 6px #666;
+}
+
+.animated-button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+/* CSS για το container της σελίδας next-step */
+.next-step-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.next-step-container label,
+.next-step-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.next-step-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.calendar-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calendar-date {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.red-circle {
+    background-color: red;
+}
+
+.yellow-circle {
+    background-color: yellow;
+    color: black; /* Μαύρο κείμενο για καλύτερη αντίθεση */
+}
+
+.green-circle {
+    background-color: green;
+}
+
+.charts-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.chart-wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 500px;
+}
+canvas {
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

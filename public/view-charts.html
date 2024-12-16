@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Διαγράμματα</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="charts-container">
+        <h2 id="charts-title">Διαγράμματα</h2>
+        <div class="chart-wrapper" id="macrosChartWrapper">
+            <canvas id="macrosChart"></canvas>
+        </div>
+        <div class="chart-wrapper" id="averageRatingChartWrapper" style="display: none;">
+            <canvas id="averageRatingChart"></canvas>
+        </div>
+        <button id="nextChartButton" class="animated-button">Επόμενο Διάγραμμα</button>
+        <button id="habitChartsButton" class="animated-button" onclick="location.href='habit-charts.html'">Διαγράμματα Συνηθειών</button>
+    </div>
+    <script src="../src/js/view-charts.js"></script>
+</body>
+</html>

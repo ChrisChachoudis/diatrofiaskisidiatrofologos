@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Καταχώρηση Άσκησης</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <div class="exercise-container">
+        <h2 id="selected-date"></h2>
+        <form id="exercise-form">
+            <label for="exercise-count">Πόσες φορές έκανες άσκηση σήμερα;</label>
+            <input type="number" id="exercise-count" name="exercise-count" min="1" required>
+            <button type="button" class="layer-button small-button" onclick="generateExerciseFields()">Υποβολή</button>
+        </form>
+        <div id="exercise-fields"></div>
+        <button type="submit" class="layer-button small-button" onclick="submitExercises()">Καταχώρηση Ασκήσεων</button>
+        <p id="total-duration-message"></p>
+        <button class="animated-button" onclick="goToNextStep()">Επόμενο Βήμα</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedDate = localStorage.getItem('selectedDate');
+            if (selectedDate) {
+                document.getElementById('selected-date').textContent = `Ημερομηνία: ${selectedDate}`;
+            }
+        });
+
+        function generateExerciseFields() {
+            const exerciseCount = document.getElementById('exercise-count').value;
+            const exerciseFields = document.getElementById('exercise-fields');
+            exerciseFields.innerHTML = '';
+
+            for (let i = 0; i < exerciseCount; i++) {
+                const exerciseDiv = document.createElement('div');
+                exerciseDiv.className = 'exercise-entry';
+                exerciseDiv.innerHTML = `
+                    <label for="exercise-type-${i}">Είδος Άσκησης:</label>
+                    <select id="exercise-type-${i}" name="exercise-type-${i}" required>
+                        <option value="Ήπια αερόβια">Ήπια αερόβια</option>
+                        <option value="Έντονη αερόβια">Έντονη αερόβια</option>
+                        <option value="Ήπια ενδυνάμωση">Ήπια ενδυνάμωση</option>
+                        <option value="Έντονη ενδυνάμωση">Έντονη ενδυνάμωση</option>
+                        <option value="Σπορ/Χόμπυ">Σπορ/Χόμπυ</option>
+                        <option value="Pilates/Yoga">Pilates/Yoga</option>
+                        <option value="Πρόγραμμα διατάσεων">Πρόγραμμα διατάσεων</option>
+                        <option value="Κολύμπι">Κολύμπι</option>
+                    </select>
+                    <label for="exercise-duration-${i}">Λεπτά Άσκησης:</label>
+                    <input type="number" id="exercise-duration-${i}" name="exercise-duration-${i}" min="1" required>
+                `;
+                exerciseFields.appendChild(exerciseDiv);
+            }
+        }
+
+        function submitExercises() {
+            const exerciseCount = document.getElementById('exercise-count').value;
+            const exercises = [];
+            let totalDuration = 0;
+
+            for (let i = 0; i < exerciseCount; i++) {
+                const type = document.getElementById(`exercise-type-${i}`).value;
+                const duration = parseInt(document.getElementById(`exercise-duration-${i}`).value, 10);
+                exercises.push({ type, duration });
+                totalDuration += duration;
+            }
+
+            const selectedDate = localStorage.getItem('selectedDate');
+            const exerciseData = JSON.parse(localStorage.getItem('exerciseData')) || {};
+            exerciseData[selectedDate] = { exercises, totalDuration };
+
+            localStorage.setItem('exerciseData', JSON.stringify(exerciseData));
+            document.getElementById('total-duration-message').textContent = `Συνολικά λεπτά άσκησης για σήμερα είναι: ${totalDuration}`;
+            alert('Οι ασκήσεις καταχωρήθηκαν επιτυχώς!');
+        }
+
+        function goToNextStep() {
+            window.location.href = 'meal-entry.html'; // Ανακατεύθυνση στη σελίδα καταχώρησης γευμάτων
+        }
+    </script>
+</body>
+</html>

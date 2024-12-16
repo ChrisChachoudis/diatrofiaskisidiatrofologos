@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Επέλεξε Ημερομηνία</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <div class="date-container">
+        <h2>Επέλεξε Ημερομηνία</h2>
+        <form id="date-form">
+            <label for="date">Ημερομηνία:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit" class="layer-button">Υποβολή</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('date-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedDate = document.getElementById('date').value;
+            localStorage.setItem('selectedDate', selectedDate);
+            window.location.href = 'exercise-entry.html'; // Ανακατεύθυνση στη σελίδα καταχώρησης ασκήσεων
+        });
+    </script>
+</body>
+</html>

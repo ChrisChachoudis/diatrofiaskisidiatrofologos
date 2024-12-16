@@ -1,0 +1,28 @@
+[
+  {
+    "userId": "chris",
+    "days": [
+      {
+        "date": "2024-12-01",
+        "sleepHours": 1,
+        "waterLiters": 1,
+        "alcoholGlasses": 1,
+        "stressLevel": 1
+      },
+      {
+        "date": "2024-12-03",
+        "sleepHours": 2,
+        "waterLiters": 2,
+        "alcoholGlasses": 2,
+        "stressLevel": 2
+      },
+      {
+        "date": "2025-01-03",
+        "sleepHours": 1,
+        "waterLiters": 2,
+        "alcoholGlasses": 1,
+        "stressLevel": 3
+      }
+    ]
+  }
+]

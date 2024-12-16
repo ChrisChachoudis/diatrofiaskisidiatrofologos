@@ -1,0 +1,20 @@
+[
+  {
+    "username": "chris",
+    "email": "chrisekei99@gmail.com",
+    "password": "1999",
+    "status": "active"
+  },
+  {
+    "username": "SKG",
+    "email": "skgfractal@gmail.com",
+    "password": "1999",
+    "status": "active"
+  },
+  {
+    "username": "maria",
+    "email": "nirvanapower82@gmail.com",
+    "password": "1999",
+    "status": "active"
+  }
+]

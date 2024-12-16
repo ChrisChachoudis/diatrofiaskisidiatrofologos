@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κεντρική Σελίδα</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <h2 id="welcome-message"></h2>
+        <button class="layer-button" onclick="location.href='select-date.html'">Καταχώρησε Στοιχεία</button>
+        <button class="layer-button" onclick="location.href='view-charts.html'">Δες Τα Διαγράμματα</button>
+        <button class="layer-button" onclick="location.href='view-awards.html'">Δες Τα Βραβεία Σου</button>
+        <button class="layer-button" onclick="location.href='color-day.html'">Χρώμα Ημέρας</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcome-message').textContent = `Καλώς ήρθες, ${username}!`;
+            }
+        });
+    </script>
+</body>
+</html>

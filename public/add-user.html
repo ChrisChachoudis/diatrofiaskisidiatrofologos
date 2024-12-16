@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Προσθήκη Χρήστη</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Προσθήκη Χρήστη</h2>
+        <form id="add-user-form">
+            <label for="username">Όνομα Χρήστη:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="new-email">Email:</label>
+            <input type="email" id="new-email" name="new-email" required>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <button type="submit">Προσθήκη</button>
+        </form>
+        <p id="add-user-message" class="login-message"></p>
+    </div>
+    <script src="../src/js/add-user.js"></script>
+</body>
+</html>

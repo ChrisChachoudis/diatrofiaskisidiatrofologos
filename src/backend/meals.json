@@ -1,0 +1,283 @@
+[
+  {
+    "userId": "maria",
+    "days": [
+      {
+        "date": "2025-01-01",
+        "totalCalories": "0.44",
+        "totalCarbs": "0.05",
+        "totalProtein": "0.06",
+        "totalFat": "0.01",
+        "totalSugar": "0.01",
+        "totalFiber": "0.03",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Βασιλικός",
+                "grams": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "chris",
+    "days": [
+      {
+        "date": "2024-12-01",
+        "totalCalories": "835.00",
+        "totalCarbs": "66.80",
+        "totalProtein": "26.72",
+        "totalFat": "20.04",
+        "totalSugar": "5.01",
+        "totalFiber": "6.68",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Μακαρόνια με κιμά",
+                "grams": 334
+              }
+            ]
+          }
+        ],
+        "averageRating": "3.00"
+      },
+      {
+        "date": "2024-12-02",
+        "totalCalories": "229.68",
+        "totalCarbs": "2.09",
+        "totalProtein": "46.40",
+        "totalFat": "3.48",
+        "totalSugar": "0.00",
+        "totalFiber": "0.00",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Γαρίδες",
+                "grams": 232
+              }
+            ]
+          }
+        ],
+        "averageRating": "3.00"
+      },
+      {
+        "date": "2024-12-07",
+        "totalCalories": "354.24",
+        "totalCarbs": "16.36",
+        "totalProtein": "0.12",
+        "totalFat": "0.12",
+        "totalSugar": "15.62",
+        "totalFiber": "0.00",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Βανίλια",
+                "grams": 123
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "2024-12-10",
+        "totalCalories": "116.80",
+        "totalCarbs": "22.53",
+        "totalProtein": "2.16",
+        "totalFat": "3.10",
+        "totalSugar": "16.93",
+        "totalFiber": "4.61",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Αβοκάντο",
+                "grams": 18
+              }
+            ]
+          },
+          {
+            "meal": 2,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Νεκταρίνι",
+                "grams": 200
+              }
+            ]
+          }
+        ],
+        "exerciseMinutes": 0
+      },
+      {
+        "date": "2024-12-30",
+        "totalCalories": "5717.45",
+        "totalCarbs": "0.00",
+        "totalProtein": "529.91",
+        "totalFat": "362.57",
+        "totalSugar": "0.00",
+        "totalFiber": "0.00",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Ψάρι (σκουμπρί)",
+                "grams": 2789
+              }
+            ]
+          }
+        ],
+        "exerciseMinutes": 0
+      },
+      {
+        "date": "2024-12-31",
+        "totalCalories": "5585.00",
+        "totalCarbs": "0.00",
+        "totalProtein": "580.84",
+        "totalFat": "67.02",
+        "totalSugar": "0.00",
+        "totalFiber": "0.00",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Μοσχάρι άπαχο",
+                "grams": 2234
+              }
+            ]
+          }
+        ],
+        "exerciseMinutes": 0
+      },
+      {
+        "date": "2025-01-14",
+        "totalCalories": "5.64",
+        "totalCarbs": "1.32",
+        "totalProtein": "0.40",
+        "totalFat": "0.02",
+        "totalSugar": "0.06",
+        "totalFiber": "0.65",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Αγκινάρες",
+                "grams": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "date": "2024-11-01",
+        "totalCalories": "9.87",
+        "totalCarbs": "2.31",
+        "totalProtein": "0.69",
+        "totalFat": "0.04",
+        "totalSugar": "0.10",
+        "totalFiber": "1.13",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Αγκινάρες",
+                "grams": 21
+              }
+            ]
+          }
+        ],
+        "averageRating": "2.00"
+      },
+      {
+        "date": "2024-12-03",
+        "totalCalories": "1.98",
+        "totalCarbs": "0.02",
+        "totalProtein": "0.40",
+        "totalFat": "0.03",
+        "totalSugar": "0.00",
+        "totalFiber": "0.00",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Γαρίδες",
+                "grams": 2
+              }
+            ]
+          }
+        ],
+        "averageRating": "1.00"
+      },
+      {
+        "date": "2024-12-16",
+        "totalCalories": "203.32",
+        "totalCarbs": "0.00",
+        "totalProtein": "0.00",
+        "totalFat": "23.00",
+        "totalSugar": "0.00",
+        "totalFiber": "0.00",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Ελαιόλαδο",
+                "grams": 23
+              }
+            ]
+          }
+        ],
+        "averageRating": "3.00"
+      },
+      {
+        "date": "2025-01-03",
+        "totalCalories": "3.90",
+        "totalCarbs": "1.04",
+        "totalProtein": "0.08",
+        "totalFat": "0.03",
+        "totalSugar": "0.81",
+        "totalFiber": "0.05",
+        "meals": [
+          {
+            "meal": 1,
+            "elements": 1,
+            "foods": [
+              {
+                "food": "Καρπούζι",
+                "grams": 13
+              }
+            ]
+          }
+        ],
+        "averageRating": "3.00"
+      }
+    ]
+  }
+]
